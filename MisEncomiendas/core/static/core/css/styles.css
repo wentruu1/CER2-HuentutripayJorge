@@ -1,0 +1,43 @@
+#navbar {
+    overflow:hidden;
+    background-color:#333;
+}
+
+#navbar a{
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+.content {
+    padding: 16px
+
+}
+
+.sticky {
+    position:fixed;
+    top:0;
+    width:100%
+}
+
+a{
+    box-shadow: inset 0 0 0 0 #000000;
+    color: #fbfbfb;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+a:hover {
+    box-shadow: inset 200px 0 0 0 #b4c615;
+    color: white;
+}
+
+.header {
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+}

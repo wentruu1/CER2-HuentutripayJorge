@@ -1,0 +1,35 @@
+{% extends 'core/base.html' %}
+
+{% block title %} Condominio MargaMarga - Correspondencia {% endblock %}
+
+{% block content %}
+<div class="cointainter-fluid" id="tabla">
+    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+        <h4> Filtrar Correspondencia </h4>
+        <form method="post">
+            {% csrf_token %}
+            {{form}}
+            <button>Enviar</button>
+        </form>
+    </div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Fecha</th>
+            <th scope="col"># Residencia</th>
+            <th scope="col">Destinatario</th>
+            <th scope="col">Estado</th>
+        </tr>
+        </thead>
+        <tbody>    
+            {% for correspondencia in correspondencias %}
+            <tr>
+                <th scope="row"> {{ correspondencia.fecha }}</th>
+                <td> {{correspondencia.casa}} </td>
+                <td> {{correspondencia.destinatario}} </td>
+                <td> {{correspondencia.estado}} </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
